@@ -5,8 +5,8 @@ A simple authenticator for Salesforce using OMB Max
 - [LICENSE.md](LICENSE.md) - open source license details for opening and contributing to GSA developed code
 - [CONTRIBUTING.md](CONTRIBUTING.md) - "rules of the road" for contributing to GSA repos including this one
 - [Code of Conduct](CODE_OF_CONDUCT.md) - behaviors that should be practiced with working at/with GSA
-* [Assets](Assets) - Screenshots and Images
-* [Src](Src) - Source Files with 
+- [Assets](Assets) - Screenshots and Images
+- [Src](Src) - Source Code Files  
 
 ## Public domain
 
