@@ -24,15 +24,15 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
         **Note:** For Production instance, set the Remote Site URL as https://login.max.gov
     2.  Create Identity Provider Certificate to be used on SAML Single Sign-On Setting.
         1.  Open the Issuer URL and copy the data between: <ds:X509Certificate>tags and create a text file: MAXCert.crt
-    4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in iii.
+    4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in iii.<br>
         **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one.
     5.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
         1.  Make sure you have an account setup in Max.Gov. if not, Register.
         2.  Request access to the GSA FICAM SAML 2 Authentication collaboration area https://community.max.gov/x/bINyNQ by                 emailing Max Support at maxsupport@max.gov 
         3.  Upload the metadata into the Collaboration Area, identifying the target environment in the comment.
         4.  Take note of the Entity Id in the SAML Single Sign-On Settings 
-        5.  Then email MaxSupport asking them to deploy the uploaded Metadata from the Collaboration Area into the target                 Environment.  And also, to update their “Circle of Trust” configuration/workaround to include the Entity Id above.
-            **Note:**For each Org Instance, there will be a unique Entity Id. Therefore,  Above needs to be setup for each ORG                      Instance.
+        5.  Then email MaxSupport asking them to deploy the uploaded Metadata from the Collaboration Area into the target                 Environment.  And also, to update their “Circle of Trust” configuration/workaround to include the Entity Id above.             <br>
+            **Note:**   For each Org Instance, there will be a unique Entity Id. Therefore,  Above needs to be setup for each                         ORG Instance.
         6.  If you plan to point your test environment to the Max Production, a different metadata needs to be created using               the  Max Production Identity Provider Certificate and Max Production Identity Provider URL.  You may reuse the                 same Max SAML Single Sign-on Settings or create a separate one, as long as the changed or new Max button is                   handled by controller that issues the SAML requests to MAX.gov.
         7.  It should be noted that Max configuration updates in Production, runs every 3 hours. Thus, once Max Support                   deploys the changes, it may take up to that time for the changes to take effect
 
