@@ -59,8 +59,6 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
     7. Alternatively, you can click on "LOGIN WITH PIV/CAC" button.  After being authenticated, you will be directed to the          Salesforce.
 
 
-
-
 ## Considerations
 
 ## Public domain
