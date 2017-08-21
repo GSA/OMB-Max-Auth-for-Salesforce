@@ -41,9 +41,12 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
         Identify Provider Login URL: https://login.max/idp/profile/SAML2/Redirect/SSO <br>
 
     5.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot4.jpg) <br>
+    6.  Instructions to implement the Metadata in the Max Test or Production Environment.
         1.  Make sure you have an account setup in Max.Gov. if not, Register.
         2.  Request access to the GSA FICAM SAML 2 Authentication collaboration area https://community.max.gov/x/bINyNQ by                 emailing Max Support at maxsupport@max.gov 
         3.  Upload the metadata into the Collaboration Area, identifying the target environment in the comment.
+            ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot5.jpg)
         4.  Take note of the Entity Id in the SAML Single Sign-On Settings 
         5.  Then email MaxSupport asking them to deploy the uploaded Metadata from the Collaboration Area into the target                 Environment.  And also, to update their “Circle of Trust” configuration/workaround to include the Entity Id above.             <br>
             **Note:**   For each Org Instance, there will be a unique Entity Id. Therefore,  Above needs to be setup for each                         ORG Instance.
