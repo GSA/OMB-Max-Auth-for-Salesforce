@@ -76,7 +76,7 @@ Follow the steps below to configure the Login Page and Controller.
     2.  Click on Manage->New
     3.  Enter the information for the following fields
         1. Name 
-        2. CommunityURL - The URL of the community for which the Login page will be used. Make sure to use https:// protocol              and not http://
+        2. CommunityURL - The URL of the community for which the Login page will be used. Make sure to use https protocol              and not http.
         3. Path Prefix  - Enter the path prefix of your community here. <br>
     Below is the example of the custom setting record.
     ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Custom%20Setting%20Record.png)
