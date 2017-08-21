@@ -34,8 +34,8 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
     4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in step ii. And provide the following: <br>
         Entity ID: https://test.salesforce.com (if your agency uses custom domain for sandbox, replace it with the same)<br> 
         Identify Provider Login URL: https://login.test.max/idp/profile/SAML2/Redirect/SSO <br>
-        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot3.jpg)
-        **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one. For Production, use the following parameters instead
+        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot3.jpg)<br>
+        **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one. For Production, use the following parameters instead<br>
         Issuer: https://login.max.gov/idp/shibboleth  <br>
         Entity ID: https://login.salesforce.com ( if your agency has custom URL , use the same) <br>
         Identify Provider Login URL: https://login.max/idp/profile/SAML2/Redirect/SSO <br>
