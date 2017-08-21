@@ -61,7 +61,7 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 
 ## Visualforce Page Configuration
 
-The Login page is built using U.S. Web Design Standards framework and is completely modularized and 508 Compliant. To find more information on U.S Web Design Standards <a href="https://standards.usa.gov/" target="_blank">click here</a>. All the headers,help text, button labels can be configured by updating the respective custom labels. Below is the screenshot of the page. 
+The Login page is built using U.S. Web Design Standards framework and is completely modularized and 508 Compliant. To find more information on U.S Web Design Standards <a href="https://standards.usa.gov/" target="_blank">click here</a>. All the headers, help text, button labels can be configured by updating the respective custom label value. Below is the screenshot of the page. 
 ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Login%20Page.Jpeg)
 
 Follow the steps below to configure the Login Page and Controller.
@@ -69,7 +69,7 @@ Follow the steps below to configure the Login Page and Controller.
 1.  Update the the logo of the page by updating the Logo static resource. 
 2.  The text for all the components of the Login section can be updated by updating the associated custom labels.
 3.  The "SSO User Login" section can be displayed or hidden by updating the SSO_Login_Section_Control custom label with True or False. 
-4.  The page has a sample script for DAP analytics. This needs to be configured based on your agency. Follow the steps listed in the page comments to configure the DAP script for your agency.
+4.  The page has a sample script for DAP analytics. This needs to be configured based on your agency. Follow the steps listed in the page comments to configure the DAP script for your agency.<br>
     **Note:** The script has been commented out of the page and do not use the same script as its associated with General Services Administration specifically and is only for reference purpose.
 5.  Update the Max Custom Settings.
     1.  Go to Set up->Quick find->Develop->Custom Settings->Max Custom Setting
