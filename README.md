@@ -21,11 +21,25 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 
 2. Enable SAML, (if not Enabled) and create a new SAML Single Sign-on Settings
     1. Setup->Administer->Security Controls->Single Sign-On Settings.<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot2.jpg)
     2.  Create Identity Provider Certificate to be used on SAML Single Sign-On Setting.
         1.  Open the Issuer URL: https://login.test.max.gov/idp/shibboleth and copy the data 
-        between: <ds:X509Certificate>tags and create a text file: MAXCert.crt
-    4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in iii.<br>
-        **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one.
+        between: <ds:X509Certificate>tags and create a text file: MAXCert.crt with the information as shown below <br>
+       
+        -----BEGIN CERTIFICATE----- <br>
+        <Certificate data copied from XML [between X509Certificate Tags]> <br>
+        -----END CERTIFICATE----- <br>
+
+        
+    4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in step ii. And provide the following: <br>
+        Entity ID: https://test.salesforce.com (if your agency uses custom domain for sandbox, replace it with the same)<br> 
+        Identify Provider Login URL: https://login.test.max/idp/profile/SAML2/Redirect/SSO <br>
+        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot3.jpg)
+        **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one. For Production, use the following parameters instead
+        Issuer: https://login.max.gov/idp/shibboleth  <br>
+        Entity ID: https://login.salesforce.com ( if your agency has custom URL , use the same) <br>
+        Identify Provider Login URL: https://login.max/idp/profile/SAML2/Redirect/SSO <br>
+
     5.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
         1.  Make sure you have an account setup in Max.Gov. if not, Register.
         2.  Request access to the GSA FICAM SAML 2 Authentication collaboration area https://community.max.gov/x/bINyNQ by                 emailing Max Support at maxsupport@max.gov 
