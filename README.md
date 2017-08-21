@@ -67,6 +67,8 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 ### How to configure MAX.gov to work with Salesforce Community User  Account
 
 1. Register at test.max.gov site. For Production instance, register at Max.gov.<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot11.jpg)<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot12.jpg)<br>
     **Note**: use your government email address that will be used in the Salesforce Community user account.
     1. Upon registration, login with your new credentials with Max Secure+SMS 2-Factor checkbox On and register your SMS              Device.
     2. After successfully SMS device registration, your MAX account is ready for Salesforce Login Integration.
