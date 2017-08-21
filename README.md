@@ -29,9 +29,7 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
         -----BEGIN CERTIFICATE----- <br>
         <Certificate data copied from XML [between X509Certificate Tags]> <br>
         -----END CERTIFICATE----- <br>
-
-        
-    4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in step ii. And provide the following: <br>
+    3.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in step ii. And provide the following: <br>
         Entity ID: https://test.salesforce.com (if your agency uses custom domain for sandbox, replace it with the same)<br> 
         Identify Provider Login URL: https://login.test.max/idp/profile/SAML2/Redirect/SSO <br>
         ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot3.jpg)<br>
@@ -40,20 +38,28 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
         Entity ID: https://login.salesforce.com ( if your agency has custom URL , use the same) <br>
         Identify Provider Login URL: https://login.max/idp/profile/SAML2/Redirect/SSO <br>
 
-    5.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
+    4.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
     ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot4.jpg) <br>
-    6.  Instructions to implement the Metadata in the Max Test or Production Environment.
+    5.  Instructions to implement the Metadata in the Max Test or Production Environment.
         1.  Make sure you have an account setup in Max.Gov. if not, Register.
         2.  Request access to the GSA FICAM SAML 2 Authentication collaboration area https://community.max.gov/x/bINyNQ by                 emailing Max Support at maxsupport@max.gov 
         3.  Upload the metadata into the Collaboration Area, identifying the target environment in the comment.
             ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot5.jpg)
-        4.  Take note of the Entity Id in the SAML Single Sign-On Settings 
+        4.  Take note of the Entity Id in the SAML Single Sign-On Settings.
+        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot6.jpg)
         5.  Then email MaxSupport asking them to deploy the uploaded Metadata from the Collaboration Area into the target                 Environment.  And also, to update their “Circle of Trust” configuration/workaround to include the Entity Id above.             <br>
-            **Note:**   For each Org Instance, there will be a unique Entity Id. Therefore,  Above needs to be setup for each                         ORG Instance.
+            **Note:** For each Org Instance, there will be a unique Entity Id. Therefore,  Above needs to be setup for each                         ORG Instance.
         6.  If you plan to point your test environment to the Max Production, a different metadata needs to be created using               the  Max Production Identity Provider Certificate and Max Production Identity Provider URL.  You may reuse the                 same Max SAML Single Sign-on Settings or create a separate one, as long as the changed or new Max button is                   handled by controller that issues the SAML requests to MAX.gov.
         7.  It should be noted that Max configuration updates in Production, runs every 3 hours. Thus, once Max Support                   deploys the changes, it may take up to that time for the changes to take effect
 
 3. Setup Community to use MAX.gov as a login option.
+        1. Setup->Build->Customize->Communities->All Communities <br>
+        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot7.jpg)<br>
+        2. Click on Manage for the desired Community->Administration->Login & Registration
+           Max is now an option available for selection. <br>
+        ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot8.jpg)<br>
+        **Note:** If default community login page is used, the MAX login button is automatically available, if not the custom                   login page needs to be configured with the option for MAX login button. Refer to the [Src](Src) folder for a                   sample Login page with MAX login button functionality configured.
+
 4. Login Flow Change.
 
 
