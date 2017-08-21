@@ -1,0 +1,158 @@
+<!-- 
+*******************************************************************************
+*
+* Description: Visualforce page for Login with OMB Max
+*
+* Modification Log:
+* -----------------------------------------------------------------------------------------
+* Mod ID        |   Date        | Mod Author                | Brief Model Description
+* -----------------------------------------------------------------------------------------
+* 0001          |   2017/06/29  | ramesh.dugar@gsa.gov      | Initial code creation.
+* -----------------------------------------------------------------------------------------
+*
+********************************************************************************/
+/**
+ * This is a  VF page for implementing the OMB max Single Sign On and general login functionality for Force.com Sites. The page was developed in collabration with Office of Governmentwide Policy(OGP) to implement OMB MAX Authentication Services as primary Identity Providers.
+ */
+
+Important points :  
+-The page uses several custom labels to modularize it. All the Section headings , help text,
+button labels can be changed by changing the text of the respective custom labels.
+-The SSO Login section can be displayed or hidden by setting True or False value in SSO_Login_Section_Control label.
+-->
+
+<apex:page controller="MaxSiteLoginController" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false">
+	<html lang="en">
+		<head>
+			<!-- Basic Page Needs-->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+          	<!--Mobile Specific Metas-->
+            <meta charset="utf-8" />
+            <meta name="HandheldFriendly" content="True"/>
+            <meta name="MobileOptimized" content="320"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="description" content="" />
+            <meta name="author" content="Ramesh Dugar" />
+
+          	<!--Title and meta description-->
+            <title>Login</title>
+            
+            <!--CSS & JS-->
+            <apex:stylesheet value="{!URLFOR($Resource.uswds, '/uswds-1.1.0/css/uswds.css')}"/>
+            <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
+            <script src="https://use.fontawesome.com/26947385e0.js"></script>
+            
+            <apex:stylesheet value="{!URLFOR($Resource.Logincss)}"/>
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+           
+            <!-- DAP Configurgation
+            - To register for the Digital Analytics Tool send an email to dap@support.digitalgov.gov requesting a sign-up form
+            - To add new URL to dashboards send an email to dap@support.digitalgov.gov once implementation is completed 
+            - Below script shows DAP configuration for OGP subagency and GSA as agency.
+            - To configure DAP for your agency, in the below DAP script, update the agency=GSA, with your agency name. And if your agency has a subagency, than update the subagency=OGP with your subagency name
+			- Once implemented in production, Inform DAP team of the new URL by sending an email to dap@support.digitalgov.gov 
+			- Refer to http://www.digitalgov.gov/services/dap/analytics-tool-instructions/gsa-dap-ua-code-quick-guide_v1/  for implementation instructions in case of any questions 
+			or concerns.
+			- Below is the sample script on how to implement DAP. Replace the agency name "GSA" with your agency name. And 
+			- if your agency has a sub agency replace OGP with your subagency name, if not leave it blank.
+            -->
+            <!--<script language="javascript" id="_fed_an_ua_tag" 
+            src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=OGP">
+            </script>-->
+		</head>
+		<body class="home-layout">
+		<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+	            <header class="usa-site-header usa-width-one-whole">
+	                    <div class="usa-banner">
+		                    <div class="usa-grid usa-banner-inner">
+		                        <apex:image alt="Logo" styleClass="Logo" url="{!URLFOR($Resource.Logo)}"/>
+		                    </div>
+	                    </div>
+				</header>
+
+				<div class="usa-grid" id="main-content">
+					<div class="usa-width-one-half halfcustom" >
+						<apex:form styleclass="usa-form" html-aria-label="LoginSection">
+	                            <div>
+	                                <div id="GeneralLogin" class="usa-drop_text">
+	                                	{!$Label.General_user_login_header_text}
+	                                </div>
+
+	                                <div class="MAXLogin">
+	                                	<div>
+			                                <span style="font-size: 15px">
+			                                	{!$Label.User_Login_with_MAX_help_text}
+			                                </span>
+			                                <apex:commandButton id="loginMax" action="{!loginMax}" 
+		                               		value="{!$Label.FRPG_Max_Login_Button_Label}" styleClass="usa-button loginMax_Button" reRender="pgmsg,errormsg"/> 
+	                               		</div>
+	                               		<div class="OR">
+                                    		<b>-OR-</b>
+                            			</div>
+                            			<p class="errorMsg">
+			                                <apex:pageMessages id="pgmsg"/>
+			                                <apex:outputPanel id="errormsg" rendered="true"/>
+			                            </p>
+                            			<div id="GenLoginWrapper">
+			                                <div id="GenLoginHeaderText">
+			                                    <span>{!$Label.General_user_login_help_text}</span>
+			                                </div>
+			                                
+			                                <div class="userinput">
+			                                    <span class="fa fa-user"></span>
+			                                    <apex:inputText id="sign-in-username" value="{!username}" styleClass="form-control" html-placeholder="Username*" html-aria-label="username"/>
+			                                </div >
+			                                
+			                                <div class="userinput">
+			                                    <span class="fa fa-lock"></span>
+			                                    <apex:inputSecret id="password" value="{!password}" styleClass="form-control" html-placeholder="Password*" html-aria-label="password"/>
+			                                </div> 
+
+			                                <apex:commandButton action="{!login}" value="{!$Label.Generic_Login_Button_Label}" styleClass="usa-button loginButton" reRender="pgmsg,errormsg" /> 
+			                                    
+			                                <apex:actionFunction name="doSomething" action="{!login}" reRender="pgmsg,errormsg"/>
+
+			                                <div class="forgotpassword">
+			                                    <p class="usa-form-note"> 
+			                                        <a href="{!$Label.Forgot_Password_URL}" title="Forgot password">
+			                                          {!$Label.site.forgot_your_password_q}
+			                                        </a>
+			                                    </p>
+			                                </div>
+			                            </div>
+	                                </div>
+	                            </div>
+
+	                            <!--This section should be modularized -->
+	                            <div style="{!IF(contains(LOWER($Label.SSO_Login_Section_Control),
+	                            'true'),'display:block','display:none')}">
+		                            <div class="usa-drop_text SSO_Header">
+		                                    {!$Label.SSO_login_header}
+		                            </div>
+		                            <div class="SSO_Content" style="margin-left: 10%;margin-right: 10%">
+                                    	<span>{!$Label.SSO_User_Login_Help_Text_Information}</span>
+	                                    <a href="{!$Label.SSO_Login_URL}" class="usa-button linkbutton"  target="_blank">
+	                                    	{!$Label.SSO_Login_Button_Label}
+	                                	</a>
+                                	</div>
+	                            </div>
+	                            
+	                    </apex:form>
+					</div>	
+				</div>
+		
+			<footer class="usa-footer Custom_Footer">
+	    		<div class="usa-grid-full" align="center">
+	                Place your footer text here. 
+	            </div>
+	    	</footer>
+			
+		</body>
+	</html>
+</apex:page>

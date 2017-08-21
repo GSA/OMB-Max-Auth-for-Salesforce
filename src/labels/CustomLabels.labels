@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Forgot_Password_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Forgot Password URL</shortDescription>
+        <value>secur/forgotpassword.jsp?locale=us</value>
+    </labels>
+    <labels>
+        <fullName>General_user_login_header_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>General user login header text</shortDescription>
+        <value>General User Login</value>
+    </labels>
+    <labels>
+        <fullName>General_user_login_help_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>General user login help text</shortDescription>
+        <value>To use your username and password</value>
+    </labels>
+    <labels>
+        <fullName>Generic_Login_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Generic Login Button Label</shortDescription>
+        <value>Username Login</value>
+    </labels>
+    <labels>
+        <fullName>Max_Login_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Max Login Button Label</shortDescription>
+        <value>MAX Login</value>
+    </labels>
+    <labels>
+        <fullName>SSO_Login_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSO Login Button Label</shortDescription>
+        <value>SSO Login</value>
+    </labels>
+    <labels>
+        <fullName>SSO_Login_Section_Control</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSO Login Section Control. Set True to display and False to hide the section</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>SSO_Login_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSO Login URL</shortDescription>
+        <value>https://login.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>SSO_User_Login_Help_Text_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSO User Login Help Text Information</shortDescription>
+        <value>For communities with Single Sign On option</value>
+    </labels>
+    <labels>
+        <fullName>SSO_login_header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSO login header</shortDescription>
+        <value>SSO User Login</value>
+    </labels>
+    <labels>
+        <fullName>User_Login_with_MAX_help_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Login with MAX help text</shortDescription>
+        <value>To use OMB MAX.gov</value>
+    </labels>
+</CustomLabels>

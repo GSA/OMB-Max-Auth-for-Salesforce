@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Logo</members>
+        <members>Logincss</members>
+        <members>uswds</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>MaxLogin</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Max_Custom_Setting__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>MaxSiteLoginController</members>
+        <members>MaxSiteLoginControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <version>38.0</version>
+</Package>
