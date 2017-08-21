@@ -21,9 +21,9 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 
 2. Enable SAML, (if not Enabled) and create a new SAML Single Sign-on Settings
     1. Setup->Administer->Security Controls->Single Sign-On Settings.<br>
-        **Note:** For Production instance, set the Remote Site URL as https://login.max.gov
     2.  Create Identity Provider Certificate to be used on SAML Single Sign-On Setting.
-        1.  Open the Issuer URL and copy the data between: <ds:X509Certificate>tags and create a text file: MAXCert.crt
+        1.  Open the Issuer URL: https://login.test.max.gov/idp/shibboleth and copy the data 
+        between: <ds:X509Certificate>tags and create a text file: MAXCert.crt
     4.  Click on New button provide the required information, including the upload of the Identity Provider Certificate               MAXCert.crt created in iii.<br>
         **Note:** Verify that a Default Self-Signed Certificate for the field Request Signing Certificate is available.               Otherwise, create one.
     5.  After the MAX SAML Single-Sign-On entry is created, download the Metadata.
