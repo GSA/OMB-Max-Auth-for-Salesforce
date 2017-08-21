@@ -62,7 +62,7 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 ## Visualforce Page Configuration
 
 The Login page is built using U.S. Web Design Standards framework and is completely modularized and 508 Compliant. To find more information on U.S Web Design Standards <a href="https://standards.usa.gov/" target="_blank">click here</a>. All the headers,help text, button labels can be configured by updating the respective custom labels. Below is the screenshot of the page. 
-
+![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Login%20Page.Jpeg)
 
 Follow the steps below to configure the Login Page and Controller.
 
@@ -79,9 +79,8 @@ Follow the steps below to configure the Login Page and Controller.
         2. CommunityURL - The URL of the community for which the Login page will be used. Make sure to use https:// protocol              and not http://
         3. Path Prefix  - Enter the path prefix of your community here. <br>
     Below is the example of the custom setting record.
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Custom%20Setting%20Record.png)
     
-    
-
 ## Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
