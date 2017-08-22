@@ -67,13 +67,16 @@ MAX Authentication Services is part of the OMB MAX.gov portal which is comprised
 ### How to configure MAX.gov to work with Salesforce Community User  Account
 
 1. Register at test.max.gov site. For Production instance, register at Max.gov.<br>
-    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot11.jpg)<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot11.jpg)
     ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot12.jpg)<br>
     **Note**: use your government email address that will be used in the Salesforce Community user account.
-    1. Upon registration, login with your new credentials with Max Secure+SMS 2-Factor checkbox On and register your SMS              Device.
+    1. Upon registration, login with your new credentials with Max Secure+SMS 2-Factor checkbox On and register your SMS              Device. <br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot13.jpg)
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot14.jpg)
     2. After successfully SMS device registration, your MAX account is ready for Salesforce Login Integration.
-    3. Alternatively, you can use your government issue PIV OR CAC Card by inserting it on your Laptop and providing the PIN.
-    
+    3. Alternatively, you can use your government issue PIV OR CAC Card by inserting it on your Laptop and providing the PIN.<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot15.jpg)<br>
+    ![picture alt](https://github.com/GSA/OMB-Max-Auth-for-Salesforce/blob/master/Assets/Screenshot16.jpg) 
 2.  How to login to Salesforce.
     1. As part of the admin setup, a field “Federation Id” on your user account will be populated with the email address used         in the MAX.gov registration.  It is vital that during MAX.gov registration the same email address is used.
     2. Go to the Login URL and click on the  Login With Max button. You will be directed to the Max login page to sign-in.
